@@ -79,14 +79,21 @@ class _LoginPageState extends State<LoginPage> {
                           },
                           child: const Text('ลงทะเบียนใหม่')),
                       FilledButton(
-                          onPressed: () {
-                            setState(() {
-                              result = 'Success';
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => const ShowTrip()));
-                            });
+                          onPressed: () async {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>const ShowTrip()));
+                            //  String url = 'https://cslab.it.msu.ac.th/tripbooking/trip';
+                            //   var res = await http.get(Uri.parse(url));
+                            //   List<TripGetResponse> trips = tripGetResponseFromJson(res.body);
+                            //   log(trips.length.toString()); 
+                              // log(res.body);
+                            // setState(() {
+                              // result = 'Success';
+
+                              // Navigator.push(
+                              //     context,
+                              //     MaterialPageRoute(
+                              //         builder: (context) => const ShowTrip()));
+                            // });
                           },
                           child: const Text('เข้าสู่ระบบ'))
                     ],
